@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mapFragment">
+
+    <RelativeLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_nearby_police"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+    <ScrollView
+    android:id="@+id/sv_locations"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Kaneohe_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/MCBH_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Kaneohe_box" />
+
+        <ImageView
+            android:id="@+id/Kalihi_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MCBH_box" />
+
+        <ImageView
+            android:id="@+id/Kailua_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Kalihi_box" />
+
+        <ImageView
+            android:id="@+id/Kapolei_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Kailua_box" />
+
+        <ImageView
+            android:id="@+id/Honolulu_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Kapolei_box" />
+
+        <ImageView
+            android:id="@+id/Pearl_City_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Honolulu_box" />
+
+        <ImageView
+            android:id="@+id/Waikiki_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Pearl_City_box" />
+
+        <ImageView
+            android:id="@+id/Wahiawa_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Waikiki_box" />
+
+        <ImageView
+            android:id="@+id/Honolulu2_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Wahiawa_box" />
+
+        <ImageView
+            android:id="@+id/Kahuku_box"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/location_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Honolulu2_box" />
+
+        <TextView
+            android:id="@+id/tv_pol_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/kaneohe_police_station"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Kaneohe_box"
+            app:layout_constraintTop_toTopOf="@+id/Kaneohe_box" />
+
+        <TextView
+            android:id="@+id/tb_pol_box2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/kailua_mcbh_police_station"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/MCBH_box"
+            app:layout_constraintTop_toTopOf="@+id/MCBH_box" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Kaneohe_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/MCBH_box"
+            app:layout_constraintTop_toBottomOf="@+id/tb_pol_box2" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Kaneohe_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb1"
+            app:srcCompat="@drawable/route" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/MCBH_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb2"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/phone_number"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 257-2123"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb2"
+            app:layout_constraintTop_toBottomOf="@+id/tb_pol_box2" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/time_away"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb1" />
+
+        <TextView
+            android:id="@+id/tv_pol_box3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Kalihi Police Station"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Kalihi_box"
+            app:layout_constraintTop_toTopOf="@+id/Kalihi_box" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 723-8207"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box3" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Kalihi_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box3" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Kalihi_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb3"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="1865 Kamehameha IV Rd, Honolulu 96819"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb3" />
+
+        <TextView
+            android:id="@+id/tv_pol_box4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Kailua Substation"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Kailua_box"
+            app:layout_constraintTop_toTopOf="@+id/Kailua_box" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Kailua_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box4" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 723-8838"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box4" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="219 Kuulei Rd, Kailua, HI 96734"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb4" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Kailua_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb4"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/tv_pol_box5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Honolulu Police Commission"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Honolulu2_box"
+            app:layout_constraintTop_toTopOf="@+id/Honolulu2_box" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Honolulu2_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb5"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/time_away"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb5"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb5" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 723-7580"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb5"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box5" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Honolulu2_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box5" />
+
+        <TextView
+            android:id="@+id/tv_pol_box6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Wahiawa Police Station"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Wahiawa_box"
+            app:layout_constraintTop_toTopOf="@+id/Wahiawa_box" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="330 N Cane St SCH, Wahiawa, HI 96786
+"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb6" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 723-8700"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box6" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Wahiawa_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb6"
+            app:srcCompat="@drawable/route" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Wahiawa_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box6" />
+
+        <TextView
+            android:id="@+id/tv_pol_box7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Pearl City Police Station"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Pearl_City_box"
+            app:layout_constraintTop_toTopOf="@+id/Pearl_City_box" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text=" 1100 Waimano Home Rd, Pearl City 96782"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb7" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Pearl_City_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb7"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 529-3111"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box7" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Pearl_City_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box7" />
+
+        <TextView
+            android:id="@+id/tv_pol_box8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Waikiki Station"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Waikiki_box"
+            app:layout_constraintTop_toTopOf="@+id/Waikiki_box" />
+
+        <TextView
+            android:id="@+id/tv_pol_box9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Kahuku Police Station"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Kahuku_box"
+            app:layout_constraintTop_toTopOf="@+id/Kahuku_box" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Kahuku_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box9" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Kahuku_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb9"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 723-8650"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box9" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="56-470 Kamehameha Hw, Kahuku 96731"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb9" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Waikiki_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb8"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 529-3801"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb8"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box8" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="2425 Kalākaua Ave, Honolulu, HI 96815"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb8"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb8" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Waikiki_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box8" />
+
+        <TextView
+            android:id="@+id/tv_pol_box10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Honolulu Police Department"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Honolulu_box"
+            app:layout_constraintTop_toTopOf="@+id/Honolulu_box" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Honolulu_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb10"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 529-3111"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb10"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box10" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="801 S Beretania St., Honolulu, HI 96813"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb10"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb10" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Honolulu_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box10" />
+
+        <TextView
+            android:id="@+id/tv_pol_box11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Kapolei Police Station"
+            android:textColor="@color/black1"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Kapolei_box"
+            app:layout_constraintTop_toTopOf="@+id/Kapolei_box" />
+
+        <TextView
+            android:id="@+id/tv_phone_pb11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(808) 723-8400"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_pb11"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box11" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="1100 Kamokila Blvd, Kapolei, HI 96707"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb11"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb11" />
+
+        <ImageView
+            android:id="@+id/iv_dir_pb11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/route"
+            app:layout_constraintStart_toStartOf="@+id/Kapolei_box"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_pb11"
+            app:srcCompat="@drawable/route" />
+
+        <ImageView
+            android:id="@+id/iv_phone_pb11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@string/police_box"
+            android:src="@drawable/call_phone"
+            app:layout_constraintStart_toStartOf="@+id/Kapolei_box"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pol_box11" />
+
+        <TextView
+            android:id="@+id/tv_dir_pb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/time_away2"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_dir_pb2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_pb2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+    <TextView
+        android:id="@+id/tv_nearby_police"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/nearby_police_stations"
+        android:textColor="@color/black1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sv_locations"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

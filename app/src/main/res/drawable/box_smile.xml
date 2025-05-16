@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="370dp"
+                android:height="150dp" />
+            <solid android:color="@color/yellow3" />
+            <corners android:topLeftRadius="20dp"
+                android:bottomRightRadius="20dp"/>
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/box_smile_design"
+        android:width="245dp"
+        android:height="130dp"
+        android:left="125dp">
+    </item>
+
+
+</layer-list>

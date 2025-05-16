@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Dashcap</string>
+    <string name="user_icon">user icon</string>
+    <string name="logo">logo</string>
+    <string name="hello_user">Hello, User</string>
+    <string name="security_device_status">Security device disconnected</string>
+    <string name="status_icon">status</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="warning_box">warning box</string>
+    <string name="safe_box">safe_box</string>
+    <string name="danger_box">danger_box</string>
+    <string name="home_menu">Home</string>
+    <string name="map_menu">Map</string>
+    <string name="camera_menu">Camera</string>
+    <string name="account_menu">Account</string>
+    <string name="viewalerts_smile">viewalerts_smile</string>
+    <string name="viewalerts_warn">viewalerts_warn</string>
+    <string name="viewalerts_danger">viewalerts_danger</string>
+    <string name="you_re_safe">No Threats</string>
+    <string name="threat_warning">Threat Warning</string>
+    <string name="threat_warning_txt">Threat Warning</string>
+    <string name="no_security_threats_have_been_detected">No security threats have been detected.</string>
+    <string name="potential_security_threats_have_been_detected">Potential security threats have been detected.</string>
+    <string name="security_threats_have_been_detected">Security threats have been detected.</string>
+    <string name="iv_danger">iv_danger</string>
+    <string name="iv_warn">iv_warn</string>
+    <string name="iv_safe">iv_safe</string>
+    <string name="police_box">police_box</string>
+    <string name="kaneohe_police_station">Kaneohe Police Station</string>
+    <string name="kailua_mcbh_police_station">Military Police Department MCBH</string>
+    <string name="phone_number">(808) 723-8640</string>
+    <string name="phone_number2">(808) 723-8838</string>
+    <string name="time_away">45-270 Waikalua Rd, Kaneohe, HI 96744</string>
+    <string name="time_away2">3rd St, Kailua, HI 96734</string>
+    <string name="nearby_police_stations">Police Stations on Oahu</string>
+    <string name="view_on_maps">View on Maps</string>
+    <string name="threat_detected">Threat Detected</string>
+
+</resources>

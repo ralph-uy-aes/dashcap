@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape android:shape="rectangle">
+        <size
+            android:height="70dp"
+            android:width="70dp" />
+        <solid android:color="@color/yellow1"/>
+        <corners android:radius="10dp"/>
+    </shape>
+</item>
+    <item android:drawable="@drawable/direction_45"
+        android:width="60dp"
+        android:height="60dp"
+        android:gravity="center">
+    </item>
+</layer-list>

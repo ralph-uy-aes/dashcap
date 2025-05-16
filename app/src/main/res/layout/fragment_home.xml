@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".homeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/iv_user_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_ic"
+        android:contentDescription="@string/user_icon" />
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dashcapsimple"
+        android:contentDescription="@string/logo" />
+
+    <TextView
+        android:id="@+id/tv_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/hello_user"
+        android:textColor="@color/black1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+    <ScrollView
+        android:id="@+id/sv_boxes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_greeting">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_smile_box"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/safe_box"
+                android:src="@drawable/box_smile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_warn_box"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/warning_box"
+                android:src="@drawable/box_warn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_smile_box" />
+
+            <ImageView
+                android:id="@+id/iv_danger_box"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/danger_box"
+                android:src="@drawable/box_danger"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_warn_box" />
+
+            <ImageButton
+                android:id="@+id/ib_alert_safe_box"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/viewalerts_smile"
+                android:src="@drawable/box_btn_smile"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_smile_box"
+                app:layout_constraintStart_toStartOf="@+id/iv_smile_box"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc_safe_box" />
+
+            <ImageButton
+                android:id="@+id/ib_alert_warn_box"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/viewalerts_warn"
+                android:src="@drawable/box_btn_warn"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_warn_box"
+                app:layout_constraintStart_toStartOf="@+id/iv_warn_box"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc_warn_box" />
+
+            <ImageButton
+                android:id="@+id/ib_alert_danger_box"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/viewalerts_danger"
+                android:src="@drawable/box_btn_danger"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_danger_box"
+                app:layout_constraintStart_toStartOf="@+id/iv_danger_box"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc_danger_box" />
+
+            <TextView
+                android:id="@+id/tv_safe_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/you_re_safe"
+                android:textColor="@color/black1"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="@+id/iv_smile_box"
+                app:layout_constraintTop_toTopOf="@+id/iv_smile_box" />
+
+            <TextView
+                android:id="@+id/tv_warn_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/threat_warning"
+                android:textColor="@color/black1"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="@+id/iv_warn_box"
+                app:layout_constraintTop_toTopOf="@+id/iv_warn_box" />
+
+            <TextView
+                android:id="@+id/tv_danger_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/threat_detected"
+                android:textColor="@color/black1"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="@+id/iv_danger_box"
+                app:layout_constraintTop_toTopOf="@+id/iv_danger_box" />
+
+            <TextView
+                android:id="@+id/tv_desc_safe_box"
+                android:layout_width="196dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="26dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/no_security_threats_have_been_detected"
+                android:textColor="@color/black1"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/iv_smile_box"
+                app:layout_constraintTop_toBottomOf="@+id/tv_safe_box" />
+
+            <TextView
+                android:id="@+id/tv_desc_warn_box"
+                android:layout_width="196dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="26dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/potential_security_threats_have_been_detected"
+                android:textColor="@color/black1"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/iv_warn_box"
+                app:layout_constraintTop_toBottomOf="@+id/tv_warn_box" />
+
+            <TextView
+                android:id="@+id/tv_desc_danger_box"
+                android:layout_width="196dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="26dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/security_threats_have_been_detected"
+                android:textColor="@color/black1"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/iv_danger_box"
+                app:layout_constraintTop_toBottomOf="@+id/tv_danger_box" />
+
+            <ImageView
+                android:id="@+id/iv_danger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:contentDescription="@string/iv_danger"
+                android:src="@drawable/alert_triangle"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_danger_box"
+                app:layout_constraintEnd_toEndOf="@+id/iv_danger_box"
+                app:layout_constraintTop_toTopOf="@+id/iv_danger_box" />
+
+            <ImageView
+                android:id="@+id/iv_warn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:contentDescription="@string/iv_warn"
+                android:src="@drawable/question_circle"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_warn_box"
+                app:layout_constraintEnd_toEndOf="@+id/iv_warn_box"
+                app:layout_constraintTop_toTopOf="@+id/iv_warn_box" />
+
+            <ImageView
+                android:id="@+id/iv_safe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:contentDescription="@string/iv_safe"
+                android:src="@drawable/smiled"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_smile_box"
+                app:layout_constraintEnd_toEndOf="@+id/iv_smile_box"
+                app:layout_constraintTop_toTopOf="@+id/iv_smile_box" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
